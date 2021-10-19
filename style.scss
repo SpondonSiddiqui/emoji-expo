@@ -1,0 +1,195 @@
+//Insert Nunito font here
+
+
+//Variables and arrays
+$colors: (
+	primary: #3377ff,
+	text-main: #27384D,
+    body-bg: #f3f5f9,
+);
+
+// Functions
+@function color($color-name) {
+	@return map-get($colors, $color-name);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 100vh;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: color(text-main);
+}
+
+body {
+    background-color: color(body-bg);
+}
+
+section {
+    margin-top: 8em;
+}
+
+a {
+    text-decoration: none;
+    color: color(text-main);
+}
+
+p {
+    line-height: 1.6em;
+}
+
+
+.container {
+    margin: auto;
+    width: 60%;
+}
+
+.nav {
+    width: 100%;
+    //display: flex;
+    display: none;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    &-secondary {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        &:hover {
+            color: #000;
+            border-bottom: 2px solid color(primary);
+        }
+    }
+}
+
+#hero {
+    margin-top: 8em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text img";
+
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 28px;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    a {
+    }
+}
+
+#how-to-play {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    li {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+#what-why-how {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"what why how";
+    gap: 3.4em;
+
+    .container{
+
+        &-what {
+            grid-area: what;
+        }
+
+        &-why {
+            grid-area: why;
+        }
+
+        &-how {
+            grid-area: how;
+        }
+    }
+
+    h1 {
+        margin-bottom: 1em;
+    }
+}
+
+#process {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+
+        margin-bottom: 4em;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+    }
+
+    h1 {
+        margin-bottom: 1em;
+    }
+}
+
+#team {
+    padding-bottom: 160px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3em;
+
+        .person {
+            img {
+                width: 40%;
+                object-fit: contain;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                border: 1px solid red;
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: 2em;
+    }
+
+    h3 {
+        margin-top: 1.4em;
+        margin-bottom: .4em;
+    }
+}
