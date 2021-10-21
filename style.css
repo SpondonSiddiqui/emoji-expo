@@ -31,7 +31,8 @@ p {
 
 .container {
   margin: auto;
-  width: 60%;
+  width: 90%;
+  max-width: 1100px;
 }
 
 .nav {
